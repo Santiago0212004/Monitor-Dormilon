@@ -19,7 +19,6 @@ public class Main {
     //Se crea la cola de las sillas de espera para los estudiantes entrantes.
     public static Queue<Integer> nextSilla = new LinkedList<>();
     public static void main(String[] args) throws InterruptedException {
-        //Se establece un numero n de estudiantes
         final int NUM_ESTUDIANTES = 10; // Número de estudiantes
         final int NUM_SILLAS = 3; // Número de sillas disponibles en el corredor
 
@@ -37,7 +36,7 @@ public class Main {
         //de acuerdo al valor establecido anteriormente en NUM_ESTUDIANTE y se inician
         for (int i = 1; i <= NUM_ESTUDIANTES; i++) {
             new Estudiante(i, monitor, sillas).start();
-            //La lógica funciona bien si no se pone, descomentar si requiere verlo de forma más comprensible
+            //La lógica funciona bien si no se pone
             Thread.sleep(10);
         }
     }
